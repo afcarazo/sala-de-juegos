@@ -1,0 +1,103 @@
+
+<app-nav-bar></app-nav-bar>
+
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head> 
+    <body>
+
+ <!--Home Banner-->
+<div class="banner">
+<div class="bg">
+<div class="content">
+<h2 class="focus-in-expand"> Bienvenido! <br>
+    </h2>
+<!--p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolore sunt natus.</p--->
+</div>
+<img src="assets/sony.png">
+</div>
+</div>
+<!--About-->
+<div class="about">
+<div class="contentBx">
+<h2>Sobre mi</h2>
+<p>
+    Agustina Carazo, primer trabajo práctico "sala de juegos".
+</p>
+<a href="../quien-soy/">Leer más</a>
+</div>
+<img class="juego"src="assets/joystick.png">
+</div>
+<!--Games-->
+
+<div class="games">
+<h2>Juegos</h2>
+<ul>
+    <li class="list active" data-filter="all">Todos</li>
+</ul>
+<div class="cardBx">
+<div class="card" data-item="pc">
+    <img src="./../../../assets/ahorcado/ahorcado.jpg">
+    <div class="content">
+<h4>Ahorcado</h4>
+<div class="progress-line"><span></span></div>
+<div class="info">
+<a href="../ahorcado/">Jugar ahora</a>
+</div>
+</div>
+    </div>
+
+
+    <div class="card" data-item="pc">
+        <img src="./../../../assets/mayor-menor/cartas.jpg">
+        <div class="content">
+    <h4>Mayor o menor</h4>
+    <div class="progress-line"><span></span></div>
+    <div class="info">
+    <a href="../mayor-menor/">Jugar ahora</a>
+    </div>
+    </div>
+        </div>
+        <div class="card" data-item="pc">
+            <img src="./../../../assets/preguntados/preguntados.jpg">
+            <div class="content">
+        <h4>Preguntados</h4>
+        <div class="progress-line"><span></span></div>
+        <div class="info">
+        <a href="../preguntados/">Jugar ahora</a>
+        </div>
+        </div>
+            </div>
+            <div class="card" data-item="pc">
+                <img src="./../../../assets/dinosaurio/uno.png">
+                <div class="content">
+            <h4 style="font-size:23px">Rescata al dinosaurio</h4>
+            <div class="progress-line"><span></span></div>
+            <div class="info">
+            <a href="../juego-propio/">Jugar ahora</a>
+            </div>
+            </div>
+                </div>
+                <!--div class="card" data-item="pc">
+                    <img src="assets/fondo1.jpg">
+                    <div class="content">
+                <h4>Próximamente</h4>
+                <div class="progress-line"><span></span></div>
+                <div class="info">
+                <a href="#">Jugar ahora</a>
+                </div>
+                </div>
+                    </div-->
+</div>
+</div>
+<script>
+    /*sticky navBar*/
+   window.addEventListener('scroll',function()
+   {
+    var header = document.querySelector('header');
+    header.classList.toggle('sticky',window.scrollY > 0);
+   });
+</script>
+</body>
+
+

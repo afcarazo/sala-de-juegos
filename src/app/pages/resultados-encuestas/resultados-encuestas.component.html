@@ -1,0 +1,35 @@
+<app-nav-bar></app-nav-bar>
+
+
+<body>
+  <div class="container py-3" style="margin-top:100px;">
+    <div class="table-responsive">
+      <h4 class="d-flex justify-content-between align-items-center mb-3" style="color:rgb(255, 255, 255)">
+        <span class="text-muted">RESULTADOS ENCUESTAS </span>
+      </h4>
+
+
+      <table style="color:rgb(0, 162, 255);" class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Apellido</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Número de teléfono</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr style="cursor: pointer" *ngFor="let encuestado of this.listadoEncuestas">
+            <td>{{encuestado.apellido}}</td>
+            <td>{{encuestado.nombre}}</td>
+            <td>{{encuestado.edad}}</td>
+            <td>{{encuestado.numeroDeTelefono}}</td>
+            <td *ngIf="encuestado.email ">{{encuestado.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>F
+</body>

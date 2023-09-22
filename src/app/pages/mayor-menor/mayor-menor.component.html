@@ -1,0 +1,50 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-bck">
+    <div class="row" >
+        <div class="col" align="center">
+            <h3 style="color: #fff;">Puntuación</h3>
+            <h1 class="puntuacion"style="height: 50px; width: 50px; border-radius: 5%; "> {{puntuacion}}</h1>
+        </div>
+    </div>
+
+    <div class="row" align="center">
+        <div class="col-6">
+            <img src="assets/mayor-menor/carta.jpg" width="60%" height="100%" style="max-width: 230px; box-shadow:#fff;"  alt="Card image">
+        </div>
+
+        <div class="col-6">
+            <div style="width: 60%; height: 100%; max-width: 230px; background-color: white;">
+                <p class="numero"style="font-size: 3cm;" >{{numeroAleatorio}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container" id="stop" style="padding-top: 10px;"></div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <p style="color: #fff; font-family: Poppins, sans-serif; text-align: center;">La siguiente carta es....</p>
+        </div>
+    </div>
+
+    <div class="row" style="text-align: center;">
+        <div class="col"> 
+            <button class="btn-men-may" id="btnMenor" (click)="esMenor()" >MENOR</button>
+        </div>
+
+        <div class="col">
+            <button class="btn-men-may" id="btnMayor" (click)="esMayor()" >MAYOR</button>
+        </div>
+    </div>
+
+    <div class="row" style="text-align: center;">
+        <div class="col">
+            <button class="btn-men-may" (click)="ReiniciarJuego()" >Nuevo Juego</button>
+        </div>
+    </div>
+</div>
+
+
+

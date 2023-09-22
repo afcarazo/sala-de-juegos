@@ -1,0 +1,39 @@
+<app-nav-bar></app-nav-bar>
+  
+<body class="bg-img">
+    
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <form [formGroup]="formularioregistro">
+      <!-- Tabs Titles -->
+     <h2 class="active"> Registrarte </h2>
+      <!-- Icon -->
+      <div class="fadeIn first">
+      </div>
+      <!-- Login Form -->
+      <form class="form-login">
+        <div class="login">
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email" [(ngModel)]="this.user.email">
+        <small class="invalid" 
+        *ngIf="formularioregistro.controls['email'].errors?.['required'] &&
+        formularioregistro.controls['email'].touched">
+        El email es requerido
+      </small>
+       
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña"[(ngModel)]="this.user.password">
+      <small class="invalid" 
+      *ngIf="formularioregistro.controls['password'].errors?.['required'] &&
+      formularioregistro.controls['password'].touched">
+      La contraseña debe tener al menos seis caracteres
+    </small>
+      <input type="password" id="passwordConfirm" class="fadeIn third" name="login" placeholder="Confirmar contraseña" [(ngModel)]="confirmPassword">
+    </div>
+</form>
+</form>
+      <input (click)="register()" type="submit" class="fadeIn fourth" value="Regístrate">
+    </div>
+  </div>
+  <footer><br><br><br></footer>
+</body>
+
+  

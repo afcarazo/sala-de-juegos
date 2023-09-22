@@ -1,0 +1,22 @@
+
+<table style="color:rgb(0, 162, 255);" class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Juego</th>
+            <th scope="col">Partidas ganadas</th>
+            <th scope="col">Partidas perdidas</th>
+            <th scope="col">Puntuación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="cursor: pointer" *ngFor="let juego of this.listadoJuegosRecibidos" >
+                <td >{{juego.juego}}</td>
+                <td *ngIf="juego.ganadas" >{{juego.ganadas}}</td>
+                <td *ngIf="!juego.ganadas" >-</td>
+                <td  *ngIf="juego.perdidas" >{{juego.perdidas}}</td>
+                <td  *ngIf="!juego.perdidas" >-</td>
+                <td *ngIf="juego.puntuacion" >{{juego.puntuacion}}</td>
+                <td *ngIf="!juego.puntuacion" >-</td>
+        </tr>
+    </tbody>
+</table>

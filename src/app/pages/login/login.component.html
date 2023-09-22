@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+
+<body class="bg-img">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Iniciar sesion </h2>
+      <!-- Icon -->
+      <div class="fadeIn first">
+      </div>
+      <!-- Login Form -->
+      <form class="form-login" [formGroup]="formularioLogin" (ngSubmit)="login()">
+        <div class="login">
+          <div class="row formulario">
+            <div>
+              <input [(ngModel)]="user.email" type="text" class="form-control" id="email" placeholder="Ingrese email"
+                formControlName="email"><br>
+              <small style="color:rgb(255, 255, 255);" class="invalid" *ngIf="formularioLogin.controls['email'].errors?.['required'] &&
+              formularioLogin.controls['email'].touched">
+                El email es requerido
+              </small>
+              <small class="invalid" *ngIf="formularioLogin.controls['email'].errors?.['email']&&
+          formularioLogin.controls['email'].touched">
+                El email no tiene el formato correcto
+              </small>
+            </div>
+            <div>
+              <input [(ngModel)]="user.password" type="password" class="form-control" id="password"
+                placeholder="Ingrese password" formControlName="password"><br>
+              <small class="invalid" style="color:rgb(255, 255, 255);" *ngIf="formularioLogin.controls['password'].errors?.['required']  &&
+              formularioLogin.controls['password'].touched">
+                El password es requerido
+              </small>
+            </div>
+          </div>
+        </div>
+        <br><input (click)="login()" type="submit" class="fadeIn fourth" value="Ingresar"><br>
+      </form>
+      <div class="btn-quick">
+        <button (click)="quickLogin()">Ingreso rapido</button>
+      </div>
+    </div>
+  </div>
+  <footer><br><br><br></footer>
+</body>

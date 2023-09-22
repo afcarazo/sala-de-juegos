@@ -1,0 +1,18 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="row" style="display: block;" align="center">
+    <img src={{pais.flag}} width="80%" style="max-width: 400px; margin-top: 100px; margin-bottom: 50px;" alt="Imagen">
+  </div>
+  <div class="c-body">
+    <h2 class="card-title">{{pregunta.pregunta}}</h2><br>
+    <div class="card-text">
+      <div class="row mb-4" style="margin-bottom: 10px ;">
+      <button class="botones" (click)="seleccionarRta(1)">{{pregunta.op1}}</button>
+      <button class="botones" (click)="seleccionarRta(2)">{{pregunta.op2}}</button>
+      </div>
+      <div class="row mb-4">
+      <button class="botones" (click)="seleccionarRta(1)">{{pregunta.op3}}</button>
+      <button class="botones" (click)="seleccionarRta(4)">{{pregunta.op4}}</button>
+    </div>
+  </div>
+</div>

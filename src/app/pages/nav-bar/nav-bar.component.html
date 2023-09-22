@@ -1,0 +1,29 @@
+
+    <div class="col-12">
+    <header>
+            
+            <img src="favicon.ico">
+        <a href="#" class="logo">Juegos</a>
+        <ul class="nav">
+            <button (click)="navegarAhome()"><a>Home</a></button>
+            <button style="text-align: center;"(click)="navegarAquienSoy()"><a>Quien soy</a></button>
+            <button *ngIf="this.isLogin"  (click)="logout()"><a> Logout</a></button>
+            <button  *ngIf="this.isLogin" (click)="navegarAPerfil()"><a>Perfil</a></button>
+            <button *ngIf="this.isLogin" (click)="navegarAChat()"><a>Chat</a></button>
+            <button  *ngIf="this.isLogin" (click)="navegarAJuegos()"><a>Juegos</a></button>
+            <button *ngIf="this.isLogin" (click)="navegarAListados()"><a>Listados</a></button>
+            <button *ngIf="this.isLogin" (click)="navegarAEncuesta()"><a>Encuesta</a></button>
+            <button *ngIf="this.isAdmin && this.isLogin" (click)="navegarAEncuestaResultados()"><a>Encuesta resultados</a></button>
+            <button *ngIf="!this.isLogin"(click)="navegarAlogin()"><a>Login</a></button>
+            <button *ngIf="!this.isLogin" (click)="navegarAregister()"><a>Registro</a></button>
+
+        </ul>
+        <div class="action">
+        <!--div class ="searchBx">
+        <a href="#"><i class='bx bx-search'></i></a>
+        <input type="text" placeholder="Buscar juegos">
+        </div-->
+        </div>
+        <div class="toggleMenu"></div>
+        </header>
+    </div>

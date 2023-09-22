@@ -1,0 +1,70 @@
+
+.container-bck{
+    margin-top: 6%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+    padding: 5%;
+    background-color: #00028059;
+    }
+.row
+{
+    margin-top: 16px;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+}
+.btn-men-may{
+    text-align: center;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: rgb(10, 7, 7);
+    text-transform: uppercase;
+    color:#fff;
+    text-align: center;
+    background-color: #3bb9f3;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 8px rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+}
+
+h1.puntuacion
+{
+    text-align: center;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: rgb(10, 7, 7);
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    background-color: #3bb9f3;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 8px rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+}
+p.numero
+{
+ 
+    text-align: center;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: rgb(61, 165, 206);
+    text-transform: uppercase;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 8px rgba(255, 255, 255, 0.3);
+    font-weight: 600;   
+}

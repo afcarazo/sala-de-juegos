@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: #1aeeef;
+    border-radius: 6px;
+}
+
+/*BANNER*/
+
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .bg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .bg .content
+{
+    width: 50%;
+    height: 100%;
+}
+
+.banner .bg .content h2
+{
+    font-size: 5em;
+    color:#fff;
+    letter-spacing: 1px;
+    text-shadow:  0px 0px 6px #1aeeef;
+}
+.banner .bg .content p
+{
+    font-size: 1em;
+    color:#dbd9d9;
+    letter-spacing: 1px;
+}
+.banner .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-size: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content a:hover
+{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+.banner .bg img
+{
+    width: 600px;
+}
+
+.about
+{
+   position:relative;
+   width: 100%;
+   min-height: 75vh;
+   padding: 0px 100px;
+   display: flex;
+   justify-content:space-between ; 
+   align-items: center;
+}
+
+.about .juego
+{
+    max-width: 40%;
+ max-height: 40%;
+}
+.about .contentBx
+{
+    width: 50%;
+    margin: 20px;
+}
+.about .contentBx h2
+{
+    font-size: 3em;
+    font-weight: 700;
+    color:#fff;
+}
+.about .contentBx p
+{
+    max-width: 600px;
+    text-align: justify;
+    color: #dbd9d9;
+}
+.about .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-size: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.about .contentBx a:hover
+{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+/*Games*/
+
+
+.games
+{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+
+.games h2{
+    color:#fff;
+    margin: 10px 0;
+}
+
+.games ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.games ul li{
+list-style: none;
+padding: 10px 20px;
+border-radius: 5px;
+margin: 5px;
+letter-spacing: 1px;
+cursor: pointer;
+color: #fff;
+}
+
+.games ul li.active
+{
+    background: #1aeeef;
+    color:#000014;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+.games .cardBx
+{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.games .cardBx .card 
+{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hidden;
+}
+.games .cardBx .card .img 
+{
+    width: 100%;
+    height: 250px;
+object-fit: cover;
+}
+.games .cardBx .card .content 
+{
+    padding: 10px;
+}
+
+.games .cardBx .card .content h4
+{
+    color:#fff;
+    margin: 15px 0;
+}
+.games .cardBx .card .progress-line
+{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #35407e;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.games .cardBx .card .progress-line span
+{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background: #1aeeef;
+    box-shadow: 0 0 10px #1aeeef;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.games .cardBx .card .info
+{
+  border-top: 2px solid #35407e;
+  padding: 5px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.games .cardBx .card .info p
+{
+  font-size: 1em;
+  color:#fff
+}
+.games .cardBx .card .info p span
+{
+  color:#1aeeef
+}
+.games .cardBx .card .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-size: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.games .cardBx .card .info a:hover
+{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+.focus-in-expand {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-9-13 15:59:15
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation focus-in-expand
+ * ----------------------------------------
+ */
+ @-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,69 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <form [formGroup]="forma" (ngSubmit)="aceptar()">
+    <div class="row formulario">
+      <div class="col-md-6 mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input [(ngModel)]="encuestado.nombre" type="text" class="form-control" id="nombre" placeholder="Ingrese nombre" formControlName="nombre">
+        <small style="color:rgb(255, 255, 255);" class="invalid" 
+          *ngIf="forma.controls['nombre'].errors?.['required'] &&
+          forma.controls['nombre'].touched">
+          El nombre es requerido
+        </small>
+        <small style="color:rgb(255, 255, 255);"  class="invalid" 
+        *ngIf="forma.controls['nombre'].errors?.['containsSpaces'] &&
+        forma.controls['nombre'].touched">
+        El nombre no puede contener espacios
+      </small>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input [(ngModel)]="encuestado.apellido"type="text" class="form-control" id="apellido" placeholder="Ingrese apellido" formControlName="apellido"> 
+        <small class="invalid" style="color:rgb(255, 255, 255);" 
+          *ngIf="forma.controls['apellido'].errors?.['required']  &&
+          forma.controls['apellido'].touched">
+          El apellido es requerido
+        </small>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="dni" class="form-label">Edad</label>
+        <input [(ngModel)]="encuestado.edad"type="number" class="form-control" id="edad" placeholder="Ingrese edad" formControlName="edad">
+        <small class="invalid" style="color:rgb(255, 255, 255);" 
+          *ngIf="forma.controls['edad'].errors?.['required']  &&
+          forma.controls['edad'].touched">
+          La edad es requerida
+        </small>
+        <small class="invalid" style="color:rgb(255, 255, 255);" 
+          *ngIf="forma.controls['edad'].errors?.['min'] || 
+          forma.controls['edad'].errors?.['max'] &&
+          forma.controls['edad'].touched">
+          La edad debe ser de 18 a 99 años
+        </small>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="dni" class="form-label">Numero de telefono</label>
+        <input [(ngModel)]="encuestado.numeroDeTelefono"type="number" class="form-control" id="numeroDeTelefono" placeholder="Ingrese numeroDeTelefono" formControlName="numeroDeTelefono">
+        <small class="invalid" style="color:rgb(255, 255, 255);" 
+          *ngIf="forma.controls['numeroDeTelefono'].errors?.['required']  &&
+          forma.controls['numeroDeTelefono'].touched">
+          El numero de telefono es requerido
+        </small>
+        <small class="invalid" style="color:rgb(255, 255, 255);" 
+          *ngIf="forma.controls['numeroDeTelefono'].errors?.['pattern'] &&
+          forma.controls['numeroDeTelefono'].touched">
+          Solo numeros
+        </small>
+        <small class="invalid" style="color:rgb(255, 255, 255);" 
+          *ngIf="forma.controls['numeroDeTelefono'].errors?.['maxLength'] &&
+          forma.controls['numeroDeTelefono'].touched">
+          Maximo 10 numeros
+        </small>
+      </div>
+     
+    </div><br>
+    <div class="botones">
+      <button class="btn"(click)="registrarEncuesta($event)"> Enviar encuesta</button><br>
+
+    </div>
+  </form>
+</div>

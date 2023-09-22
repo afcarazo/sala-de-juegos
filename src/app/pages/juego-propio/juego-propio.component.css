@@ -1,0 +1,156 @@
+
+.mensaje-juego{
+  font-family: "Poppins", sans-serif;
+    font-size: 45pt;
+    text-align: center;
+    font-weight: 100;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 11;
+
+    /*EXTRAS*/
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(43, 86, 107, 0.4);
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    /*margin: 25px 20px 40px 20px;*/
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+button {
+    background-color: #1aeeef;
+    width: 300px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-shadow: #ffffff;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(0, 255, 255, 0.685);
+    box-shadow: 0 10px 30px 0 rgba(0, 217, 255, 0.575);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    /*margin: 25px 20px 40px 20px;*/
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+button:hover  {
+  background-color: #1031eb;
+  color: #ffffff;
+}
+
+  
+  .iniciar-juego{
+    color:#FFE2D1;
+  }
+  
+  .game-over{
+    color:#df0000
+  }
+  .contenedor{
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(#B7D6C7, #273dff);
+  
+    overflow: hidden;
+  
+    top: 100px;
+  }
+  
+  .dino{
+    width: 84px;
+    height: 84px;
+  
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+  
+    background: url("../../../assets/dinosaurio/dino.png");
+
+    background-size: 336px 84px;
+    background-position-x: 0px;
+  }
+  
+  .dino-corriendo{
+    animation: animarDino 0.25s steps(2) infinite;
+  }
+  
+  .dino-estrellado{
+    background-position-x: -252px;
+  }
+  
+  .suelo{
+    width: 200%;
+    height: 42px;
+  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url("../../../assets/dinosaurio/suelo.png") repeat-x 0px 0px;
+    background-size: 50% 42px;
+  }
+  
+  .cactus{
+    width: 46px;
+    height: 96px;
+  
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+  
+    background: url('../../../assets/dinosaurio/cactus1.png') no-repeat;
+  }
+  
+  .score{
+    width: 100px;
+    height: 30px;
+  
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    z-index: 10;
+  
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+  
+  }
+  
+  @keyframes animarDino {
+    from{
+      background-position-x: -84px;
+    }
+  
+    to{
+      background-position-x: -252px;
+    }
+  }
+  

@@ -1,0 +1,35 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-bck">
+
+    <!-- Ahorcado -->
+    <div class="container"> 
+        <img src="{{arrayImagenes[indexImagen]}}" width="30%" alt="ahorcado">
+    </div>
+
+    <!-- Alerts -->
+    <div class="container" id="pedrito"></div>
+
+    <!-- Letras de la palabra a adivinas -->
+    <div class="container">
+        <div class="row" style="display: flex;">
+            <div class="col" *ngFor="let item of palabraConGuionesArray">
+                <div class="letras"> <strong> {{item}}</strong>  </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teclado -->
+    <div class="container">
+        <div class="row">
+            <button class="bttn-fill bttn-md bttn-primary m-1 btn-lg" *ngFor="let item of teclado" (click)="pushLetra(item)" id="{{item}}">{{item}}</button>
+        </div>
+    </div>
+
+    <!-- Boton Nuevo Juego -->
+    <div class="row">
+        <div class="col">
+            <button class="bttn-fill bttn-lg bttn-success" style="width: 100%; height: 100%; border-radius: 5px;" (click)="ReiniciarJuego()">Nuevo Juego</button>
+        </div>
+    </div>
+
+</div>
